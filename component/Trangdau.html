@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <title>Trang đầu</title>
+    <script src="../bootstrap/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .container{
+            display: grid;
+            place-items: center;
+            background-color: #ff5963;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .section{
+            text-align: center;
+            padding: 50px;
+        }
+        .section img{
+            width: 150px;
+            height: 150px;
+            background-color: #ffe64d;
+            background-image: #ffe64d;
+        }
+        .section p{
+            font-family: serif;
+            font-size: 60px;
+            font-style: oblique;
+            color: #fefbfd;
+            padding: 40px;
+        }
+        .spinner-border{
+            width: 3rem;
+            height: 3rem;
+            color: #ffe74c;
+        }
+        .footer{
+            text-align: center;
+        }
+        .footer p{
+            font-family: serif;    
+            font-size: 20px;
+            font-style: oblique;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="Yellow" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"/>
+              </svg>
+            <p>Let talk</p>
+            <a href="../component/Dangnhap.html">
+                <button type="button"  class="btn btn-light btn-lg">Đăng nhập</button>
+            </a>
+            <a href="../component/Dangky.html">
+                <button type="button"  class="btn btn-light btn-lg">Đăng ký</button>
+            </a>
+        </div>
+        <div class="footer text-light">
+            <p>Developed by Team 4</p>
+        </div>
+    </div>
+</body>
+</html>

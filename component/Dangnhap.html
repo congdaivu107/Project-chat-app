@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <style>
+        .container{
+            display: flex;
+            place-items: center;
+            background-color: white;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .header{
+            text-align: center;
+            padding: 70px;
+        }
+        .pagination .page-item.active{
+            padding: 5px;
+        }
+        .pagination .page-item {    
+            padding: 5px;
+        }
+        .pagination .page-item.active .page-link{
+            border: none;
+            border-radius: 50%;
+            background-color:  #ff5963;
+            color: aliceblue;
+        }
+        .pagination .page-item .page-link{
+            border-radius: 50px ;
+            background-color: grey;
+            color: aliceblue;
+        }
+        .section{
+            text-align: center;
+            padding: 10px;
+        }
+        .section p{
+            font-size: 40px;
+            padding: 2  0px;
+        }
+        .section img{
+            width: 170px;
+            height: 170px;
+        }
+        .section .article{
+            flex-direction: row;
+        }
+        .btn{
+            background-color: #ff5963;
+            color: aliceblue;
+            border: none;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <ul class="pagination">
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a>
+                </li>
+            </ul>
+        </div>
+        <div class="section">
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="#ff5963" class="bi bi-phone" viewBox="0 0 16 16">
+                <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+              </svg>
+            <p class="">Enter mobile number</p>
+            <div class="article row">
+                <div class="col-2">
+                    <label for="khuvuc"></label>
+                    <select name="khuvuc" id="khuvuc">
+                        <option value="84">+84</option>
+                    </select>
+                </div>
+                <div class="col-10 p-3 ">
+                    <input type="text" placeholder="Mobile" class="form-control">
+                </div>
+            </div>
+            <a href="./OTPDN.html">
+                <button class="btn w-50">SEND OTP</button>
+            </a>
+            
+        </div>
+    
+    </div>
+    <script src="../bootstrap/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="../bootstrap/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <title>OTP đăng nhập</title>
+    <style>
+        .container{
+            display: flex;
+            place-items: center;
+            background-color: white;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .section{
+            text-align: center;
+            padding: 40px;
+            flex-direction: column;
+        }
+        .header{
+            text-align: center;
+            padding: 70px;
+        }
+        .pagination .page-item.active{
+            padding: 5px;
+        }
+        .pagination .page-item {    
+            padding: 5px;
+        }
+        .pagination .page-item.active .page-link{
+            border: none;
+            border-radius: 50%;
+            background-color:  #ff5963;
+            color: aliceblue;
+        }
+        .pagination .page-item .page-link{
+            border-radius: 50px ;
+            background-color: grey;
+            color: aliceblue;
+        }
+        .section .header{
+            text-align: center;
+            padding: 20px;
+        }
+        .bi-asterisk{
+            padding: 1px;
+        }
+        .section p{
+            font-size: 40px;
+            padding: 20px;
+        }
+        .section button{
+            background-color: #ff5963;
+            color: aliceblue;
+            border: none;
+            border-radius: 50px;
+            margin-top: 30px;
+        }
+        #otpInput {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        #resendButton {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <div class="header">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">2</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="section">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ff5963" class="bi bi-asterisk" viewBox="0 0 16 16">
+                        <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ff5963" class="bi bi-asterisk" viewBox="0 0 16 16">
+                        <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ff5963" class="bi bi-asterisk" viewBox="0 0 16 16">
+                        <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1"/>
+                      </svg>
+                <p class="p-5">Enter OTP sent to your phone number</p>
+                    <input type="text" placeholder="OTP" class="form-control">
+                <button class="btn w-50">NEXT</button>
+            </div>
+    </div>
+</div>
+    <label for="otpInput">Enter OTP:</label>
+    <input type="text" id="otpInput">
+    <p id="otpStatus">Waiting for OTP...</p>
+    <p id="resendMessage">Didn't receive OTP? <span id="resendButton" onclick="resendOTP()">Resend</span></p>
+    <script>
+    let otpSent = false;
+
+    function resendOTP() {
+        simulateOTPSend();
+        document.getElementById('resendMessage').innerHTML = 'OTP resent!';
+        otpSent = true;
+    }
+
+    function simulateOTPSend() {
+      console.log('Resending OTP...');
+    }
+
+    document.getElementById('otpInput').addEventListener('input', function() {
+      const otpValue = this.value.trim();
+      if (otpValue.length > 0) {
+        document.getElementById('otpStatus').innerText = 'OTP Verified!';
+        document.getElementById('resendMessage').style.display = 'none';
+      } else {
+        document.getElementById('otpStatus').innerText = 'Waiting for OTP...';
+        document.getElementById('resendMessage').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
